@@ -1,0 +1,6 @@
+sudo service postgresql start
+rails new AppName -T --database=postgresql
+cd AppName
+rails db:create && rails db:migrate
+rails s -b $IP -p $PORT
+run rails/startup
