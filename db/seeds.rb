@@ -25,14 +25,14 @@ puts "10 blog posts created"
   
   puts "5 skills created"
   
-  8.times do |portfolio_item|
-    Portfolio.create!(
-      title: "portfolio title #{portfolio_item}",
-      subtitle: "Ruby on Rails",
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-      main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/350x200"
-      )
+8.times do |portfolio_item|
+  Portfolio.create!(
+    title: "portfolio title #{portfolio_item}",
+    subtitle: "Ruby on Rails",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+    main_image: "http://via.placeholder.com/600x400",
+    thumb_image: "http://via.placeholder.com/350x200"
+    )
   end
   
   1.times do |portfolio_item|
@@ -53,4 +53,5 @@ puts "10 blog posts created"
       portfolio_id: Portfolio.last.id
       )
     end
+    
   puts "3 technology items created"
