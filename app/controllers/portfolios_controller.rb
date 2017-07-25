@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout 'portfolio'
   def index
     @portfolio_item = Portfolio.all
@@ -41,12 +42,12 @@ class PortfoliosController < ApplicationController
   end
   
   def show
-    @portfolio_item = Portfolio.find(params[:id])
+   
   end
   
   def destroy
     #look up
-    @portfolio_item = Portfolio.find(params[:id])
+    
     
     #destoy record
     @portfolio_item.destroy
@@ -63,5 +64,8 @@ class PortfoliosController < ApplicationController
                                       :subtitle, 
                                       :body, 
                                       technologies_attributes: [:name])
+  end
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end 
