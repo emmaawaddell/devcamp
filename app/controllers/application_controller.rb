@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
   include DefaultPageContent
-
   
+  before_action :set_copyright
+  
+  def set_copyright
+    @copyright = WaddellViewTool::Renderer.copyright 'Emma Waddell', 'All Rights Reserved'
+  end
 end
+    
+
