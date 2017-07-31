@@ -6,33 +6,30 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-<<<<<<< HEAD
-  # config.secret_key = '2f97b0b014c64f8b130ffdf2e5ec2b2c848ab18ba3c8851ccbc0d18c85dfbe792e24b49e4e34e7a7f1caa830a48dbe929229b86b48d298d5f69024064b2c6eb0'
-=======
   # config.secret_key = '26ccc850853d9ed4e0f14ee1461b1cdf74899163ab5608fafb71b8d3c9d67fe68ecd39c8569c72b15ef854f64827eb4656a40e552409e2b515a8124287aae933'
->>>>>>> rubygem
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-<<<<<<< HEAD
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-=======
-  config.mailer_sender = 'support@laudie.com'
->>>>>>> rubygem
+  config.mailer_sender = 'support@laudie.com' 
+  
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  
+  # config.mailer = "Devise::Mailer"
 
   # Configure the parent class responsible to send e-mails.
-  # config.parent_mailer = 'ActionMailer::Base'
+  
+  # config.parent_mailer = "ActionMailer::Base"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
+  
+  
+  require "devise/orm/active_record"
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -77,18 +74,20 @@ Devise.setup do |config|
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
 
-  # The realm used in Http Basic Authentication. 'Application' by default.
-  # config.http_authentication_realm = 'Application'
+  # The realm used in Http Basic Authentication. "Application" by default.
+  
+  
+  # config.http_authentication_realm = "Application"
 
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
   # config.paranoid = true
 
-  # By default Devise will store the user in session. You can skip storage for
+ # By default Devise will store the user in session. You can skip storage for
   # particular strategies by setting this option.
   # Notice that if you are skipping storage for all authentication paths, you
-  # may want to disable generating routes to Devise's sessions controller by
+  # may want to disable generating routes to Devise sessions controller by
   # passing skip: :sessions to `devise_for` in your config/routes.rb
   config.skip_session_storage = [:http_auth]
 
@@ -116,11 +115,8 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-<<<<<<< HEAD
   # config.pepper = 'ae2e5399f0b41882ccb5c463d70e275692f900037edef052a68edc650e5ba896b5a92a2b433f043ee4499c59d838ffd8d4b38e05439acb9f3dae6932419178e7'
-=======
   # config.pepper = 'c273f1149f679dc8fedbfd6b8b21f97bc408c1e1fc4f116055d3b3b30597b1b2adcb0c90102463bb4b52cbbefe0fb8bd9b452d964e82deea7e9a052e3ce55b67'
->>>>>>> rubygem
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
